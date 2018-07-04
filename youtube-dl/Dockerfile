@@ -1,4 +1,6 @@
 FROM alpine:3.3
+RUN mkdir /src
+WORKDIR /src
 ENV EDGE_REPOSITORY=http://dl-cdn.alpinelinux.org/alpine/edge/main
 RUN apk update --repository $EDGE_REPOSITORY \
 	&& apk add py-pip ca-certificates \
